@@ -65,6 +65,7 @@ clang-any.compile-options = ["-Wno-self-assign-field"]
 
 [target.dbg]
 type = "shared"
+include-after = ["cmake/dthl-breakpoint.cmake"]
 sources = [
     "src/dbg/*.cpp",
     "src/dbg/*.c",

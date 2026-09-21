@@ -522,6 +522,9 @@ if(CMAKE_SIZEOF_VOID_P EQUAL 8) # x64
 	)
 endif()
 
+set(CMKR_TARGET dbg)
+include("cmake/dthl-breakpoint.cmake")
+
 # Target: gui
 set(gui_SOURCES
 	cmake.toml
