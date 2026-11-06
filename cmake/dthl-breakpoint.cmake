@@ -1,4 +1,4 @@
-# DTHyperLab 隐藏软件断点只接管 TitanEngine 的断点读写路径。
+# dthlab 隐藏软件断点只接管 TitanEngine 的断点读写路径。
 # 保持上游 TitanEngine 子模块原样，方便后续直接更新官方源码。
 if(TARGET TitanEngine AND CMAKE_SIZEOF_VOID_P EQUAL 8)
     set(DTHL_BREAKPOINT_BRIDGE_DIR "${CMAKE_SOURCE_DIR}/src/dthl")

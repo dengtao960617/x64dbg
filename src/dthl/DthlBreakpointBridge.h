@@ -1,6 +1,6 @@
 /*
  * File: DthlBreakpointBridge.h
- * Description: TitanEngine 断点读写与 DTHyperLab VT 隐藏断点的内建桥接声明
+ * Description: TitanEngine 断点读写与 dthlab VT 隐藏断点的内建桥接声明
  * Author: @DTony
  * Date: 2026-09-06
  */

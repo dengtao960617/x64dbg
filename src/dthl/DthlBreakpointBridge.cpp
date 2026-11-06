@@ -1,6 +1,6 @@
 /*
  * File: DthlBreakpointBridge.cpp
- * Description: 在 TitanEngine 内部无插件接入 DTHyperLab VT 隐藏 INT3，仅替换软件断点读写路径
+ * Description: 在 TitanEngine 内部无插件接入 dthlab VT 隐藏 INT3，仅替换软件断点读写路径
  * Author: @DTony
  * Date: 2026-09-06
  */
