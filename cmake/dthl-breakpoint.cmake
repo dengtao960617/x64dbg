@@ -29,12 +29,12 @@ if(TARGET TitanEngine AND CMAKE_SIZEOF_VOID_P EQUAL 8)
     )
 
     # 本仓库构建时把 SDK 放到 TitanEngine.dll 同目录；独立上游源码树没有该文件时保持原构建行为。
-    set(DTHL_SDK_DLL "${CMAKE_SOURCE_DIR}/../../x64/Release/DTHyperLabSDK.dll")
+    set(DTHL_SDK_DLL "${CMAKE_SOURCE_DIR}/../../x64/Release/dthlab_sdk.dll")
     if(EXISTS "${DTHL_SDK_DLL}")
         add_custom_target(dthl_sdk_deploy
-            COMMAND "${CMAKE_COMMAND}" -E copy_if_different "${DTHL_SDK_DLL}" "$<TARGET_FILE_DIR:TitanEngine>/DTHyperLabSDK.dll"
+            COMMAND "${CMAKE_COMMAND}" -E copy_if_different "${DTHL_SDK_DLL}" "$<TARGET_FILE_DIR:TitanEngine>/dthlab_sdk.dll"
             DEPENDS TitanEngine
-            COMMENT "复制 DTHyperLabSDK.dll 到 x64dbg 运行目录"
+            COMMENT "复制 dthlab_sdk.dll 到 x64dbg 运行目录"
         )
         add_dependencies(dbg dthl_sdk_deploy)
     endif()

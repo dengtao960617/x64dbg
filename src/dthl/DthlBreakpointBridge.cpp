@@ -87,7 +87,7 @@ namespace
         if(slash == nullptr)
             return false;
 
-        return wcscpy_s(slash + 1, capacity - static_cast<size_t>((slash + 1) - path), L"DTHyperLabSDK.dll") == 0;
+        return wcscpy_s(slash + 1, capacity - static_cast<size_t>((slash + 1) - path), L"dthlab_sdk.dll") == 0;
     }
 
     /**
@@ -104,7 +104,7 @@ namespace
 
         wchar_t* slash = wcsrchr(sdk_path, L'\\');
         if(slash != nullptr && wcscpy_s(slash + 1, _countof(sdk_path) - static_cast<size_t>((slash + 1) - sdk_path),
-                                       L"..\\..\\..\\..\\x64\\Release\\DTHyperLabSDK.dll") == 0)
+                                       L"..\\..\\..\\..\\x64\\Release\\dthlab_sdk.dll") == 0)
             load_api_from_path(sdk_path);
         return TRUE;
     }
